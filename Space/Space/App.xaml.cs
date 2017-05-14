@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Space.Helpers;
+﻿using Space.Helpers;
 using Space.ViewModels;
 using Space.Views;
 using Xamarin.Forms;
@@ -11,13 +7,13 @@ namespace Space
 {
     public static class ViewModelLocator
     {
-        static MonkeysViewModel monkeysVM;
-        public static MonkeysViewModel MonkeysViewModel
-        => monkeysVM ?? (monkeysVM = new MonkeysViewModel());
+        static UniversitiesViewModel UniversitiesVM;
+        public static UniversitiesViewModel UniversitiesViewModel
+        => UniversitiesVM ?? (UniversitiesVM = new UniversitiesViewModel());
 
-        static DetailsViewModel detailsVM;
-        public static DetailsViewModel DetailsViewModel
-        => detailsVM ?? (detailsVM = new DetailsViewModel(MonkeyHelper.Monkeys[0]));
+        static DetailsViewModel2 detailsVM;
+        public static DetailsViewModel2 DetailsViewModel2
+        => detailsVM ?? (detailsVM = new DetailsViewModel2(UniversityHelper.Universities[0]));
     }
 
     public partial class App : Application
@@ -28,7 +24,7 @@ namespace Space
 
             MainPage = new NavigationPage(new HomePage())
             {
-                BarTextColor = Color.White,
+                BarTextColor = Color.Black,
                 BarBackgroundColor = Color.FromHex("#F2C500")
             };
         }

@@ -1,11 +1,5 @@
 ﻿using Space.Models;
 using Space.ViewModels;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -17,7 +11,7 @@ namespace Space.Views
         public MonkeysPage()
         {
             InitializeComponent();
-            BindingContext = new MonkeysViewModel();
+            BindingContext = new UniversitiesViewModel();
         }
 
         void Handle_ItemTapped(object sender, ItemTappedEventArgs e)
@@ -25,11 +19,9 @@ namespace Space.Views
 
         void Handle_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            var monkey = ((ListView)sender).SelectedItem as Monkey;
-            if (monkey == null)
+            var university = ((ListView)sender).SelectedItem as University;
+            if (university == null)
                 return;
-
-
         }
     }
 }

@@ -15,7 +15,6 @@ namespace Space.Views
         public HomePage()
         {
             InitializeComponent();
-
         }
 
         async void ButtonTraditionalClicked(object sender, System.EventArgs e)
